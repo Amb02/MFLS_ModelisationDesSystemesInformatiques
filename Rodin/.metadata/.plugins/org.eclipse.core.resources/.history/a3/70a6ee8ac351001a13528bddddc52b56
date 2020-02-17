@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.scMachineFile org.eventb.core.accurate="true" org.eventb.core.configuration="org.eventb.core.fwd">
+<org.eventb.core.scSeesContext name="'" org.eventb.core.scTarget="/RodinProject/C0.bcc" org.eventb.core.source="/RodinProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.seesContext#,"/>
+<org.eventb.core.scInternalContext name="C0">
+<org.eventb.core.scCarrierSet name="CARTES" org.eventb.core.source="/RodinProject/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.carrierSet#'" org.eventb.core.type="ℙ(CARTES)"/>
+</org.eventb.core.scInternalContext>
+<org.eventb.core.scInvariant name="C1" org.eventb.core.label="inv1" org.eventb.core.predicate="cartes⊆CARTES" org.eventb.core.source="/RodinProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.invariant#)" org.eventb.core.theorem="false"/>
+<org.eventb.core.scInvariant name="C2" org.eventb.core.label="inv2" org.eventb.core.predicate="solde∈CARTES → ℕ" org.eventb.core.source="/RodinProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.invariant#+" org.eventb.core.theorem="false"/>
+<org.eventb.core.scVariable name="cartes" org.eventb.core.abstract="false" org.eventb.core.concrete="true" org.eventb.core.source="/RodinProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.variable#(" org.eventb.core.type="ℙ(CARTES)"/>
+<org.eventb.core.scVariable name="solde" org.eventb.core.abstract="false" org.eventb.core.concrete="true" org.eventb.core.source="/RodinProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.variable#*" org.eventb.core.type="ℙ(CARTES×ℤ)"/>
+<org.eventb.core.scEvent name="cartet" org.eventb.core.accurate="true" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION" org.eventb.core.source="/RodinProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#'">
+<org.eventb.core.scAction name="'" org.eventb.core.assignment="cartes ≔ ∅ ⦂ ℙ(CARTES)" org.eventb.core.label="act1" org.eventb.core.source="/RodinProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#'|org.eventb.core.action#'"/>
+<org.eventb.core.scAction name="(" org.eventb.core.assignment="solde ≔ ∅ ⦂ ℙ(CARTES×ℤ)" org.eventb.core.label="act2" org.eventb.core.source="/RodinProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#'|org.eventb.core.action#("/>
+</org.eventb.core.scEvent>
+<org.eventb.core.scEvent name="carteu" org.eventb.core.accurate="true" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="creerCarte" org.eventb.core.source="/RodinProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#-">
+<org.eventb.core.scGuard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="c∉cartes" org.eventb.core.source="/RodinProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#-|org.eventb.core.guard#(" org.eventb.core.theorem="false"/>
+<org.eventb.core.scParameter name="c" org.eventb.core.source="/RodinProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#-|org.eventb.core.parameter#'" org.eventb.core.type="CARTES"/>
+<org.eventb.core.scAction name="d" org.eventb.core.assignment="solde ≔ solde{c ↦ 0}" org.eventb.core.label="act1" org.eventb.core.source="/RodinProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#-|org.eventb.core.action#)"/>
+<org.eventb.core.scAction name="e" org.eventb.core.assignment="cartes ≔ cartes∪{c}" org.eventb.core.label="act2" org.eventb.core.source="/RodinProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#-|org.eventb.core.action#*"/>
+</org.eventb.core.scEvent>
+<org.eventb.core.scEvent name="cartev" org.eventb.core.accurate="true" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="supprimerCarte" org.eventb.core.source="/RodinProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#.">
+<org.eventb.core.scGuard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="c∈cartes" org.eventb.core.source="/RodinProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#.|org.eventb.core.guard#(" org.eventb.core.theorem="false"/>
+<org.eventb.core.scGuard name="(" org.eventb.core.label="grd2" org.eventb.core.predicate="solde(c)=0" org.eventb.core.source="/RodinProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#.|org.eventb.core.guard#)" org.eventb.core.theorem="false"/>
+<org.eventb.core.scParameter name="c" org.eventb.core.source="/RodinProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#.|org.eventb.core.parameter#'" org.eventb.core.type="CARTES"/>
+<org.eventb.core.scAction name="d" org.eventb.core.assignment="cartes ≔ cartes ∖ {c}" org.eventb.core.label="act1" org.eventb.core.source="/RodinProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#.|org.eventb.core.action#*"/>
+<org.eventb.core.scAction name="e" org.eventb.core.assignment="solde ≔ {c} ⩤ solde" org.eventb.core.label="act2" org.eventb.core.source="/RodinProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#.|org.eventb.core.action#+"/>
+</org.eventb.core.scEvent>
+<org.eventb.core.scEvent name="cartew" org.eventb.core.accurate="true" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="rechargerCarte" org.eventb.core.source="/RodinProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#0">
+<org.eventb.core.scGuard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="c∈cartes" org.eventb.core.source="/RodinProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#0|org.eventb.core.guard#)" org.eventb.core.theorem="false"/>
+<org.eventb.core.scGuard name="(" org.eventb.core.label="grd2" org.eventb.core.predicate="m∈ℕ" org.eventb.core.source="/RodinProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#0|org.eventb.core.guard#*" org.eventb.core.theorem="false"/>
+<org.eventb.core.scGuard name=")" org.eventb.core.label="grd3" org.eventb.core.predicate="m≥1000∧m≤20000" org.eventb.core.source="/RodinProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#0|org.eventb.core.guard#+" org.eventb.core.theorem="false"/>
+<org.eventb.core.scGuard name="*" org.eventb.core.label="grd4" org.eventb.core.predicate="solde(c)≤20000 − m" org.eventb.core.source="/RodinProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#0|org.eventb.core.guard#," org.eventb.core.theorem="false"/>
+<org.eventb.core.scParameter name="c" org.eventb.core.source="/RodinProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#0|org.eventb.core.parameter#'" org.eventb.core.type="CARTES"/>
+<org.eventb.core.scParameter name="m" org.eventb.core.source="/RodinProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#0|org.eventb.core.parameter#(" org.eventb.core.type="ℤ"/>
+<org.eventb.core.scAction name="n" org.eventb.core.assignment="solde ≔ solde{c ↦ solde(c)+m}" org.eventb.core.label="act1" org.eventb.core.source="/RodinProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#0|org.eventb.core.action#-"/>
+</org.eventb.core.scEvent>
+</org.eventb.core.scMachineFile>

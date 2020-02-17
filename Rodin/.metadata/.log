@@ -1,0 +1,18 @@
+!SESSION 2020-02-17 20:52:58.700 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_241
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=fr_FR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.core.resources 4 376 2020-02-17 21:24:23.285
+!MESSAGE Marker id 14 not found.
+
+!ENTRY org.eclipse.core.resources 4 376 2020-02-17 21:24:23.358
+!MESSAGE Marker id 15 not found.
+
+!ENTRY org.eclipse.core.resources 4 376 2020-02-17 21:24:23.378
+!MESSAGE Marker id 16 not found.
+
+!ENTRY org.eclipse.core.resources 4 376 2020-02-17 21:24:23.393
+!MESSAGE Marker id 17 not found.
